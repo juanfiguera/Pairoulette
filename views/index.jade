@@ -1,5 +1,23 @@
-extends layout
+h1= title
+h3= "pair program with random hackers across the globe"
 
-block content
-  h1= title
-  p Welcome to #{title}
+window.document
+$('sh_buttondiv')
+
+span#sh_button_div
+    script(type='text/javascript')
+      var _shq = _shq || [];
+      
+      var user_array = ['juanfiguera@gmail.com', 'rockin@gmail.com'];
+      var user = user_array[Math.floor(Math.random() * user_array.length)];  
+      console.log(user);
+      
+      _shq.push(['sh_button_div', { email : user, showOffline : true}]);
+      buttonCSS = "color:black;";
+      (function() {
+      var shjs = document.createElement('script'); shjs.type = 'text/javascript'; shjs.async = true;
+      shjs.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://www') + '.screenhero.com/js/jsplugin.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(shjs, s);
+      })();
+      
+      
